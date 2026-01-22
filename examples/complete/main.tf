@@ -25,6 +25,8 @@ module "terraform_snowflake_warehouse_1" {
   name    = "full_warehouse"
   comment = "My Warehouse"
 
+  snowflake_private_key = var.snowflake_private_key
+
   context_templates = var.context_templates
 
   warehouse_size = "x-small"
@@ -63,6 +65,8 @@ module "terraform_snowflake_warehouse_1" {
 module "terraform_snowflake_warehouse_2" {
   source = "../../"
 
+  snowflake_private_key = var.snowflake_private_key
+
   name = "sample_warehouse_2"
   name_scheme = {
     context_template_name = "snowflake-project-warehouse"
@@ -79,6 +83,8 @@ module "terraform_snowflake_warehouse_2" {
 
 module "terraform_snowflake_warehouse_3" {
   source = "../../"
+
+  snowflake_private_key = var.snowflake_private_key
 
   name = "sample_warehouse_3"
   name_scheme = {
