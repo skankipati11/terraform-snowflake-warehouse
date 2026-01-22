@@ -1,5 +1,3 @@
-provider "snowflake" {}
-
 provider "context" {
   properties = {
     "environment" = {}
